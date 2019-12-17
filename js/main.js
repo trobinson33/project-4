@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
 	  itemSelector: '.grid-item',
 	  layoutMode: 'fitRows',
 	  filter: function() {
-	    return qsRegex ? $(this).text().match( qsRegex ) : true;
+	    return qsRegex ? $(this).find('a').data("caption").match( qsRegex ) : true;
 	  }
 	});
 
